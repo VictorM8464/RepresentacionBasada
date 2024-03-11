@@ -1,0 +1,29 @@
+class Pelicula:
+    def __init__(self, titulo, genero):
+        self.titulo = titulo
+        self.genero = genero
+
+
+def recomendar_pelicula(preferencias_usuario):
+    # Base de datos de películas
+    base_de_datos_peliculas = [
+        Pelicula("The Shawshank Redemption", "Drama"),
+        Pelicula("The Godfather", "Drama"),
+        Pelicula("The Dark Knight", "Acción"),
+        Pelicula("Inception", "Ciencia Ficción"),
+        Pelicula("Pulp Fiction", "Drama")
+    ]
+    
+    # Buscar películas similares a las preferencias del usuario
+    peliculas_recomendadas = []
+    for pelicula in base_de_datos_peliculas:
+        if pelicula.genero in preferencias_usuario:
+            peliculas_recomendadas.append(pelicula.titulo)
+    
+    return peliculas_recomendadas
+
+
+# Ejemplo de uso
+preferencias_usuario = ["Drama", "Acción"]
+peliculas_recomendadas = recomendar_pelicula(preferencias_usuario)
+print("Películas recomendadas:", peliculas_recomendadas)
