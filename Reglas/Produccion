@@ -1,0 +1,12 @@
+def obtener_licencia_de_conducir(edad):
+    # Reglas para determinar si se puede obtener una licencia de conducir
+    if edad >= 18:
+        return "Puede obtener una licencia de conducir."
+    else:
+        return "No puede obtener una licencia de conducir debido a su edad."
+
+
+# Ejemplo de uso
+edad_persona = 20
+resultado = obtener_licencia_de_conducir(edad_persona)
+print(resultado)
